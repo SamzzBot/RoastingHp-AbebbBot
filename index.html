@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roasting HP</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Roasting HP</h1>
+        <form action="/roast" method="post">
+            <label for="merk">Merk HP</label>
+            <input type="text" name="merk" id="merk" required>
+            
+            <label for="chipset">Chipset</label>
+            <input type="text" name="chipset" id="chipset" required>
+
+            <label for="ram">RAM</label>
+            <input type="text" name="ram" id="ram" required>
+
+            <label for="battery">Baterai</label>
+            <input type="text" name="battery" id="battery" required>
+
+            <label for="camera">Kamera</label>
+            <input type="text" name="camera" id="camera" required>
+
+            <button type="submit">Roasting</button>
+        </form>
+
+        <% if (roast) { %>
+            <div class="roasting-result">
+                <h2>Hasil Roasting:</h2>
+                <p><%= roast %></p>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
